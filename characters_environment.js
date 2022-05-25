@@ -91,7 +91,7 @@ function game(){
   
   }
 
-    // if game is over 
+    // Se o jogo acabar 
   if(gameConfig.status==='gameover'){
     
     fill(0,0,0,150);
@@ -121,7 +121,7 @@ function startGame()
   document.getElementById("status").innerHTML = "Carregando";
 }
 
-// change game status if any key is pressed
+// Modifique o status do jogo se qualquer tecla for pressionada
 function changeGameStatud(character){
  if(noseX !="" && gameConfig.status==="start" && GameStatus=="start") { 
    document.getElementById("status").innerHTML = "Carregado";
@@ -590,8 +590,8 @@ function scores(character){
 
   if(character.live&&gameConfig.status==='play') gameConfig.timeScores+=0.05;
   
-  text("scores: "+round(gameConfig.scores),20,40);
-  text("lives: "+character.liveNumber,20,80);
+  text("Pontos: "+round(gameConfig.scores),20,40);
+  text("Vidas: "+character.liveNumber,20,80);
 
   if(mario.live==false && mario.liveNumber!=0){
     fill(0,0,0,150);
@@ -611,7 +611,7 @@ function scores(character){
     textAlign(CENTER);
     textSize(40);
     text(round(character.liveNumber),gameConfig.screenX/2,gameConfig.screenY/2-35);
-    text("lives",gameConfig.screenX/2,gameConfig.screenY/2);
+    text("Vidas",gameConfig.screenX/2,gameConfig.screenY/2);
 
     
   }
